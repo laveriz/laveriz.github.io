@@ -1,0 +1,2 @@
+# laveriz.github.io
+blog
