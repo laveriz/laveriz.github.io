@@ -1,0 +1,47 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav>
+	<a
+		href="/"
+		class={currentPath === '/' ? 'active' : ''}
+		aria-current={currentPath === '/' ? 'page' : undefined}>Home</a
+	>
+	<a
+		href="/about/"
+		class={currentPath === '/about/' ? 'active' : ''}
+		aria-current={currentPath === '/about/' ? 'page' : undefined}>About</a
+	>
+	<a
+		href="/blog/"
+		class={currentPath === '/blog/' || currentPath.startsWith('/posts/')
+			? 'active'
+			: ''}
+		aria-current={currentPath === '/blog/' || currentPath.startsWith('/posts/')
+			? 'page'
+			: undefined}
+		>Blog
+	</a>
+</nav>
+
+<style>
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 1.2rem 2rem;
+		display: flex;
+		gap: 2rem;
+		z-index: 100;
+		background-color: #0a0a0a;
+		font-size: 0.875rem;
+		flex-wrap: wrap;
+	}
+
+	.active {
+		color: #e8dcff;
+		border-bottom: 1px solid #c9b8e8;
+	}
+</style>
