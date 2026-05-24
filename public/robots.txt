@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laveriz.github.io/sitemap-index.xml
