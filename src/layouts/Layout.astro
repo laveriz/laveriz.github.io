@@ -40,6 +40,16 @@ const pageTitle = title === "Laver's Log" ? title : `${title} | Laver's Log`;
 			crossorigin="anonymous"
 		/>
 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-BLPG55E88B"
+		></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-BLPG55E88B');
+		</script>
 		<title>{pageTitle}</title>
 	</head>
 
